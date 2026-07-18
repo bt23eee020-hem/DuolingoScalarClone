@@ -802,9 +802,15 @@ function SettingsView() {
 // MAIN COMPONENT
 // ==========================================
 function HomeContent() {
-  const { user, loading } = useUserStore();
+  const { user, loading, activeTab, setActiveTab } = useUserStore();
   const searchParams = useSearchParams();
-  const activeTab = searchParams.get('tab') || 'learn';
+
+  useEffect(() => {
+    const tab = searchParams.get('tab');
+    if (tab && tab !== activeTab) {
+      setActiveTab(tab);
+    }
+  }, [searchParams, activeTab, setActiveTab]);
 
   if (loading) {
     return (

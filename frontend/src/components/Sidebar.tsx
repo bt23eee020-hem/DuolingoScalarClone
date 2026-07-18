@@ -19,7 +19,7 @@ import { useUserStore } from '../store/useUserStore';
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const { user, logout } = useUserStore();
+  const { user, logout, activeTab, setActiveTab } = useUserStore();
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -61,13 +61,13 @@ export default function Sidebar() {
       {/* Nav List */}
       <nav className="flex w-full items-center justify-start gap-2 overflow-x-auto md:overflow-visible md:mt-8 md:flex-col md:justify-start md:gap-2 h-full scrollbar-hide px-2">
         {navItems.map((item) => {
-          const currentTab = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('tab') || 'learn' : 'learn';
-          const isActive = item.tab === currentTab;
+          const isActive = item.tab === activeTab;
           const Icon = item.icon;
           return (
             <Link
               key={item.href}
               href={item.href}
+              onClick={() => setActiveTab(item.tab)}
               className={`flex items-center gap-4 rounded-xl px-3 sm:px-4 py-2 sm:py-3.5 text-[15px] font-black tracking-wider uppercase transition-all duration-250 md:w-full justify-center md:justify-start border-2 shrink-0 md:shrink border-transparent ${
                 isActive 
                   ? 'border-[#84d8ff] bg-[#ddf4ff] text-[#1899d6] dark:bg-[#1a272e] dark:border-[#1cb0f6] dark:text-white' 

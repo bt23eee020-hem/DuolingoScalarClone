@@ -19,7 +19,9 @@ interface UserState {
   token: string | null;
   loading: boolean;
   error: string | null;
+  activeTab: string;
   
+  setActiveTab: (tab: string) => void;
   initUser: () => Promise<void>;
   login: (credentials: any) => Promise<void>;
   register: (data: any) => Promise<void>;
@@ -36,6 +38,9 @@ export const useUserStore = create<UserState>((set, get) => ({
   token: typeof window !== 'undefined' ? localStorage.getItem('duolingo_token') : null,
   loading: false,
   error: null,
+  activeTab: 'learn',
+
+  setActiveTab: (tab) => set({ activeTab: tab }),
 
   initUser: async () => {
     const token = get().token;

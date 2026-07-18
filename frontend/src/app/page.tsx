@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useUserStore } from '../store/useUserStore';
 import { apiFetch } from '../services/api';
@@ -801,7 +801,7 @@ function SettingsView() {
 // ==========================================
 // MAIN COMPONENT
 // ==========================================
-export default function Home() {
+function HomeContent() {
   const { user, loading } = useUserStore();
   const searchParams = useSearchParams();
   const activeTab = searchParams.get('tab') || 'learn';
@@ -903,3 +903,16 @@ export default function Home() {
   );
 }
 
+export default function Home() {
+  return (
+    <Suspense fallback={
+      <div className="flex min-h-screen items-center justify-center bg-gray-50">
+        <div className="flex flex-col items-center">
+          <div className="text-6xl animate-bounce">🦉</div>
+        </div>
+      </div>
+    }>
+      <HomeContent />
+    </Suspense>
+  );
+}

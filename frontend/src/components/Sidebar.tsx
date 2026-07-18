@@ -59,7 +59,7 @@ export default function Sidebar() {
       </div>
 
       {/* Nav List */}
-      <nav className="flex w-full items-center justify-start sm:justify-around gap-1 overflow-x-auto md:overflow-visible md:mt-8 md:flex-col md:justify-start md:gap-2 h-full scrollbar-hide">
+      <nav className="flex w-full items-center justify-center gap-2 overflow-x-auto md:overflow-visible md:mt-8 md:flex-col md:justify-start md:gap-2 h-full scrollbar-hide">
         {navItems.map((item) => {
           const currentTab = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('tab') || 'learn' : 'learn';
           const isActive = item.tab === currentTab;

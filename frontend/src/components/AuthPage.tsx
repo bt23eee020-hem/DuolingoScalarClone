@@ -52,7 +52,7 @@ export default function AuthPage() {
       {/* Section 1: Hero ("learn a language with duolingo") */}
       <section className="min-h-screen w-full flex flex-col justify-center items-center px-6 py-20 relative overflow-hidden bg-white">
         {/* Floating Icons & Coins Background */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden hidden md:block">
           {/* Gold Coins */}
           <motion.div className="absolute top-[15%] left-[10%] text-6xl drop-shadow-md select-none" animate={{ y: [0, -15, 0], rotate: [0, 10, 0] }} transition={{ duration: 4, repeat: Infinity }}>🪙</motion.div>
           <motion.div className="absolute bottom-[25%] left-[15%] text-5xl drop-shadow-md select-none" animate={{ y: [0, 12, 0], rotate: [0, -10, 0] }} transition={{ duration: 3.5, repeat: Infinity }}>🪙</motion.div>
@@ -75,9 +75,9 @@ export default function AuthPage() {
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut' }}
-            className="w-56 h-56 rounded-full bg-gradient-to-tr from-green-400 to-emerald-500 p-1 shadow-2xl flex items-center justify-center relative"
+            className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-tr from-green-400 to-emerald-500 p-1 shadow-2xl flex items-center justify-center relative"
           >
-            <span className="text-9xl select-none">🦉</span>
+            <span className="text-8xl md:text-9xl select-none">🦉</span>
             <div className="absolute -bottom-2 bg-white border-2 border-green-400 px-4 py-1 rounded-full text-xs font-black text-green-600 uppercase tracking-widest shadow-md">
               Duo Mascot
             </div>
@@ -167,7 +167,7 @@ export default function AuthPage() {
           </div>
           {/* Right Phone Graphic */}
           <motion.div
-            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-96 w-full"
+            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center md:mt-0"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -215,7 +215,7 @@ export default function AuthPage() {
           </div>
           {/* Left Graphic */}
           <motion.div
-            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-96 w-full"
+            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.65] md:scale-100 origin-center -mt-8 md:mt-0"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -257,7 +257,7 @@ export default function AuthPage() {
           </div>
           {/* Right Graphic */}
           <motion.div
-            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-96 w-full"
+            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.65] md:scale-100 origin-center -mt-8 md:mt-0"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -311,7 +311,7 @@ export default function AuthPage() {
 
           {/* Right Custom Illustration: Character next to Green Dotted Seal Star */}
           <motion.div
-            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-96 w-full"
+            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center -mt-4 md:mt-0"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -371,7 +371,7 @@ export default function AuthPage() {
 
           {/* Left Custom Illustration: Student riding giant pencil on smartphone screen */}
           <motion.div
-            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-96 w-full"
+            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center -mt-4 md:mt-0"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -435,7 +435,7 @@ export default function AuthPage() {
 
           {/* Right Custom Illustration: Smartphone displaying Duo owl + cubes A, B, C */}
           <motion.div
-            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-96 w-full"
+            className="flex-1 flex justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center -mt-4 md:mt-0"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}

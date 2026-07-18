@@ -167,7 +167,7 @@ export default function AuthPage() {
           </div>
           {/* Right Phone Graphic */}
           <motion.div
-            className="hidden md:flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center md:mt-0"
+            className="flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center mt-16 md:mt-0"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -215,7 +215,7 @@ export default function AuthPage() {
           </div>
           {/* Left Graphic */}
           <motion.div
-            className="hidden md:flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.65] md:scale-100 origin-center -mt-8 md:mt-0"
+            className="flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.65] md:scale-100 origin-center mt-20 md:mt-0"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -257,7 +257,7 @@ export default function AuthPage() {
           </div>
           {/* Right Graphic */}
           <motion.div
-            className="hidden md:flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.65] md:scale-100 origin-center -mt-8 md:mt-0"
+            className="flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.65] md:scale-100 origin-center mt-20 md:mt-0"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -311,7 +311,7 @@ export default function AuthPage() {
 
           {/* Right Custom Illustration: Character next to Green Dotted Seal Star */}
           <motion.div
-            className="hidden md:flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center -mt-4 md:mt-0"
+            className="flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center mt-16 md:mt-0"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -371,7 +371,7 @@ export default function AuthPage() {
 
           {/* Left Custom Illustration: Student riding giant pencil on smartphone screen */}
           <motion.div
-            className="hidden md:flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center -mt-4 md:mt-0"
+            className="flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center mt-16 md:mt-0"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -435,7 +435,7 @@ export default function AuthPage() {
 
           {/* Right Custom Illustration: Smartphone displaying Duo owl + cubes A, B, C */}
           <motion.div
-            className="hidden md:flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center -mt-4 md:mt-0"
+            className="flex flex-1 justify-center max-w-sm md:max-w-none relative h-72 md:h-96 w-full scale-[0.7] md:scale-100 origin-center mt-16 md:mt-0"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
